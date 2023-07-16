@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Undangan Pernikahan</title>
+    <style>
+      /* Gaya CSS untuk mengatur tampilan halaman */
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333333;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #666666;
+        line-height: 1.5;
+      }
+
+      .event-details {
+        text-align: left;
+        margin-top: 40px;
+      }
+
+      .event-details h2 {
+        color: #333333;
+        margin-bottom: 10px;
+      }
+
+      .event-details p {
+        margin-bottom: 5px;
+      }
+
+      .rsvp-button {
+        display: inline-block;
+        margin-top: 30px;
+        background-color: #008080;
+        color: #ffffff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .rsvp-button:hover {
+        background-color: #006666;
+      }
+
+      .map-container {
+        margin-top: 40px;
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Undangan Pernikahan</h1>
+      <p>Halo,</p>
+      <p>Kami dengan senang hati mengundang Anda untuk hadir dalam acara pernikahan kami.</p>
+      <div class="event-details">
+        <h2>Detail Acara:</h2>
+        <p>Tanggal: <strong id="tanggal"></strong></p>
+        <p>Waktu: <strong id="waktu"></strong></p>
+        <p>Tempat: <strong id="tempat"></strong></p>
+        <p>Alamat: <strong id="alamat"></strong></p>
+      </div>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d991.2758465505879!2d106.77461926946366!3d-6.380654666802807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMjInNTAuNCJTIDEwNsKwNDYnMzEuMCJF!5e0!3m2!1sen!2sid!4v1689508898251!5m2!1sen!2sid"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p>Apakah Anda akan hadir?</p>
+      <div class="rsvp-options">
+        <button
+          class="rsvp-button"
+          onclick="showConfirmation()">
+          Konfirmasi Kehadiran
+        </button>
+        <p
+          id="confirmation-message"
+          style="display: none">
+          Terima kasih telah mengkonfirmasi kehadiran Anda!
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Mengisi detail acara menggunakan JavaScript
+      document.getElementById('tanggal').textContent = 'DD/MM/YYYY';
+      document.getElementById('waktu').textContent = 'HH:MM';
+      document.getElementById('tempat').textContent = 'Lokasi Acara';
+      document.getElementById('alamat').textContent = 'Alamat Acara';
+
+      // Menampilkan pesan konfirmasi
+      function showConfirmation() {
+        document.getElementById('confirmation-message').style.display = 'block';
+      }
+    </script>
+  </body>
+</html>
